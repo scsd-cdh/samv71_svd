@@ -6,11 +6,11 @@ svd2ada ../svd/ATSAMV71Q21B.svd --boolean -o src -p SAM_SVD --base-types-package
 ```
 svd2ada                               # The command-line tool
 ../svd/ATSAMV71Q21B.svd               # The input SVD file
---boolean                             # Use boolean types where appropriate
+--boolean                             # Represent single-bit fields as Booleans
 -o src                                # Output directory
--p SAM_SVD                            # Prefix for generated package names
+-p SAM_SVD                            # The root package name for the generated spec hierarchy
 --base-types-package HAL              # Use base types from the HAL package
---gen-uint-always                     # Some option to generate unsigned integers
+--gen-uint-always                     # Generate UInt* for base types; do not use the Bit and Byte variants
 
 ```
 
